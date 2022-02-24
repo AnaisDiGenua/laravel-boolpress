@@ -13,7 +13,7 @@ class PostController extends Controller
         // $posts = Post::all();
         
         // filtro per prendere solo i post pubblicati
-        $posts = Post::where("published", true)->get();
+        $posts = Post::where("published", true)->with(["category", "tags"])->get();
 
         return response()->json($posts);
     }
