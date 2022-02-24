@@ -13,14 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//area pubblica - frontoffice
-Route::get('/', function () {
-    return view('front');
-});
-
 
 //rotte autenticazione
 Auth::routes();
+
 
 //area privata - backoffice
 Route::prefix("admin")->namespace("Admin")->middleware("auth")->group(function() {
@@ -29,5 +25,11 @@ Route::prefix("admin")->namespace("Admin")->middleware("auth")->group(function()
     Route::resource("categories", "CategoryController");
     Route::resource("tags", "TagController");
 });
+
+
+//area pubblica - frontoffice
+Route::get("{any?}", function() {
+    return view("front");
+})->where("any", ".*");
 
 
