@@ -1,10 +1,14 @@
 <template>
     <header>
         <h2>Header</h2>
+        <a href="/login">Area riservata</a>
         <nav>
-            <ul>
-                <li><a href="/login">Area riservata</a></li>
-            </ul>
+            <li>
+                <router-link :to="{ name: 'home' }">Home</router-link>
+            </li>
+            <li>
+                <router-link :to="{ name: 'about' }">Chi siamo</router-link>
+            </li>
         </nav>
     </header>
 </template>
