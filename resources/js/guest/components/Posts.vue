@@ -14,7 +14,6 @@
                         </li>
                     </ul>
                 </div>
-                <p>{{post.content}}</p>
                 <router-link :to="{ name: 'single-post', params: { slug: post.slug } }">visualizza post</router-link>
             </li>
         </ul>

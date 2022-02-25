@@ -2036,7 +2036,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Posts',
   data: function data() {
@@ -2792,8 +2791,6 @@ var render = function () {
                   ),
                 ])
               : _vm._e(),
-            _vm._v(" "),
-            _c("p", [_vm._v(_vm._s(post.content))]),
             _vm._v(" "),
             _c(
               "router-link",
