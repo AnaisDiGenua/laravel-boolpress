@@ -24,6 +24,11 @@ class PostController extends Controller
     {
         $post = Post::where("slug", $slug)->with(["category", "tags"])->first();
 
+        //404
+        if(empty($post)) {
+            return response()->json(["message" => "Not found"], 404);
+        }
+
         //restituisco il dato sotto forma di json
         return response()->json($post);
     }
