@@ -3,6 +3,13 @@
         <h2>{{post.title}}</h2>
         <img :src="`/storage/${post.image}`" :alt="post.title">
         <p>{{post.content}}</p>
+        <!-- tags -->
+        <div v-if="post.tags.length > 0">
+            <span><strong>Tag:</strong></span>
+            <span v-for="tag in post.tags" :key="tag.id">
+                #{{tag.name}}
+            </span>
+        </div>
     </div>
 </template>
 
@@ -25,3 +32,10 @@ export default {
     }
 }
 </script>
+
+<style lang="scss" scoped>
+
+    img {
+        width: 300px;
+    }
+</style>

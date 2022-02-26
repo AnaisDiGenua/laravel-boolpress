@@ -10,6 +10,9 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="css" scoped>
+    main {
+        background-color: lightcyan;
+        padding: 30px;
+    }
 </style>
