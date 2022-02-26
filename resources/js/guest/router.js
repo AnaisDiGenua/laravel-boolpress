@@ -8,6 +8,7 @@ import About from "./pages/About";
 import SinglePost from "./pages/SinglePost";
 import PageNotFound from "./pages/PageNotFound";
 import Categories from './pages/Categories';
+import SingleCategory from './pages/SingleCategory';
 
 
 const router = new VueRouter({
@@ -33,6 +34,12 @@ const router = new VueRouter({
             path: "/categorie",
             name: "categories",
             component: Categories
+        },
+        //rotta dinamica
+        {
+            path: "/categories/:slug",
+            name: "single-category",
+            component: SingleCategory
         },
         //404
         {
