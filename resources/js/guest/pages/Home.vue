@@ -1,6 +1,5 @@
 <template>
     <div>
-        <h1>Homepage</h1>
         <Posts/>
     </div>
 </template>

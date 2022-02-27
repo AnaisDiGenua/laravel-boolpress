@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <section>
         <h2>{{category.name}}</h2>
 
         <ul v-if="category.posts.length > 0">
@@ -10,7 +10,7 @@
         <div v-else>
             Non ci sono post associati a questa categoria
         </div>
-    </div>
+    </section>
 </template>
 
 <script>

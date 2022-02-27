@@ -7,7 +7,7 @@
                 <div class="photo">
                     <img :src="`/storage/${post.image}`" :alt="post.title">
                 </div>
-                <!-- titolo -->
+                <!-- titolo e link-->
                 <div class="title">
                     <router-link :to="{ name: 'single-post', params: { slug: post.slug } }">{{post.title}}</router-link>
                 </div>
@@ -41,7 +41,6 @@ export default {
 @import '../../../sass/_variables.scss';
 
     section {
-        background-color: lightgreen;
         ul {
             list-style: none;
             display: flex;
@@ -51,6 +50,7 @@ export default {
                 margin: 20px;
                 background-color: $body-bg;
                 position: relative;
+                box-shadow: 6px 6px 20px rgba(0,0,0,0.5);
                 .photo img {
                     width: 100%;
                     height: 280px;
@@ -59,10 +59,10 @@ export default {
                     text-align: center;
                     margin: 20px 0;
                     a {
-                    text-transform: uppercase;
+                    // text-transform: uppercase;
                     text-decoration: none;
-                    font-size: 1.5625rem;
-                    font-weight: 700;
+                    font-size: 1.375rem;
+                    font-weight: 300;
                     color: $_darkgray;
                     }
                 }

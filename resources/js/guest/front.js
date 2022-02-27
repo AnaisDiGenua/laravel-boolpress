@@ -6,6 +6,7 @@ window.Vue = require('vue');
 
 import App from './App.vue';
 
+
 // aggiungiamo l'import del file router.js
 import router from "./router";
 

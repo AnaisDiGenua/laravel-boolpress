@@ -12,7 +12,7 @@ export default {
 
 <style lang="css" scoped>
     main {
-        background-color: lightcyan;
+        background-color: white;
         padding: 30px;
     }
 </style>

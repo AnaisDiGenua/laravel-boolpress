@@ -1,12 +1,12 @@
 <template>
-    <div>
+    <section>
         <h2>Categorie</h2>
         <ul>
             <li v-for="category in categories" :key="category.id">
                 <router-link :to="{ name: 'single-category', params: { slug: category.slug } } ">{{category.name}}</router-link>
             </li>
         </ul>
-    </div>
+    </section>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <ection>
         <h2>{{post.title}}</h2>
         <img :src="`/storage/${post.image}`" :alt="post.title">
         <p>{{post.content}}</p>

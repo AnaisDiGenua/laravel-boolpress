@@ -16,5 +16,10 @@ body {
 
 /* COMMONS */
 
+section {
+  min-height: calc(100vh - 150px - 60px);
+  /* viewport - header e footer - padding main */
+}
+
 /* TYPO */
 

@@ -10,6 +10,12 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import '../../../sass/_variables.scss';
+    footer{
+        height: 70px;
+        background-color: $_purple;
+
+    }
 
 </style>
