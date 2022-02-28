@@ -16,8 +16,13 @@ body {
 
 /* COMMONS */
 
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 section {
-  min-height: calc(100vh - 150px - 60px);
+  min-height: calc(100vh - 140px - 60px);
   /* viewport - header e footer - padding main */
 }
 

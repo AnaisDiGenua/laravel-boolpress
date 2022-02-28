@@ -1,6 +1,9 @@
 <template>
     <main>
-        <router-view :key="$route.path"></router-view>
+        <div class="container">
+            <router-view :key="$route.path"></router-view>
+        </div>
+        
     </main>
 </template>
 
@@ -10,7 +13,7 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
     main {
         background-color: white;
         padding: 30px;

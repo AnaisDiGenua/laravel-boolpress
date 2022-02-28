@@ -7,9 +7,13 @@
                 <div class="photo">
                     <img :src="`/storage/${post.image}`" :alt="post.title">
                 </div>
-                <!-- titolo e link-->
+                <!-- titolo-->
                 <div class="title">
-                    <router-link :to="{ name: 'single-post', params: { slug: post.slug } }">{{post.title}}</router-link>
+                    <h3>{{post.title}}</h3>
+                </div>
+                <!-- link -->
+                <div class="link">
+                    <button><router-link :to="{ name: 'single-post', params: { slug: post.slug } }">visualizza</router-link></button>
                 </div>
                 <!-- categoria -->
                 <div class="category">
@@ -50,20 +54,39 @@ export default {
                 margin: 20px;
                 background-color: $body-bg;
                 position: relative;
-                box-shadow: 6px 6px 20px rgba(0,0,0,0.5);
-                .photo img {
-                    width: 100%;
+                box-shadow: 6px 6px 10px rgba(0,0,0,0.2);
+                .photo {
                     height: 280px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    
                 }
                 .title {
                     text-align: center;
                     margin: 20px 0;
-                    a {
+                    h3 {
                     // text-transform: uppercase;
-                    text-decoration: none;
                     font-size: 1.375rem;
                     font-weight: 300;
                     color: $_darkgray;
+                    }
+                }
+                .link {
+                    text-align: center;
+                    margin-bottom: 10px;
+                    button {
+                        background-color: $_purple;
+                        border-radius: 1rem;
+                        border: none;
+                        padding: 5px 10px;
+                        a {
+                        text-decoration: none;
+                        font-size: .875rem;
+                        color: $body-bg;
+                        }
                     }
                 }
                 .category {

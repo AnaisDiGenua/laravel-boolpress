@@ -1,5 +1,5 @@
 <template>
-    <ection>
+    <section>
         <h2>{{post.title}}</h2>
         <img :src="`/storage/${post.image}`" :alt="post.title">
         <p>{{post.content}}</p>
@@ -10,7 +10,7 @@
                 #{{tag.name}}
             </span>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
