@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Posts from '../components/Posts.vue';
+import Posts from '../components/sections/Posts.vue';
 
 export default {
     name: "Home",

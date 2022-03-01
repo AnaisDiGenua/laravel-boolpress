@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../../sass/_variables.scss';
+@import '../../../../sass/_variables.scss';
     footer{
         height: 60px;
         background-color: $_purple;

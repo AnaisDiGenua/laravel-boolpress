@@ -42,7 +42,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../../sass/_variables.scss';
+@import '../../../../sass/_variables.scss';
 
     section {
         ul {
