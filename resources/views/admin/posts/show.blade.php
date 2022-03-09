@@ -55,6 +55,39 @@
                             <button type="submit" class="btn btn-danger">elimina</button>
                         </form>
                     </div>
+
+                    @if (count($post->comments) > 0)
+                        <div class="mt-5" id="comments">
+                            <h3>Commenti</h3>
+                            <table class="table">
+                                <tbody>
+                                    @foreach ($post->comments as $comment)
+                                    <tr>
+                                        <td>{{$comment->content}}</td>
+                                        <td>
+                                            @if(!$comment->approved)
+                                                <form action="{{route('comments.update', $comment->id)}}" method="POST">
+                                                    @csrf
+                                                    @method("PATCH")
+                                                    <button type="submit" class="btn btn-success">Approva</button>
+                                                </form>
+                                            @else
+                                                Approvato
+                                            @endif
+                                        </td>
+                                        <td>
+                                            <form action="{{route("comments.destroy", $comment->id)}}" method="POST">
+                                                @csrf
+                                                @method("DELETE")
+                                                <button type="submit" class="btn btn-danger">Elimina</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>

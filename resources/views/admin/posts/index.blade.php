@@ -19,6 +19,7 @@
                                 <th scope="col">Slug</th>
                                 <th scope="col">Categoria</th>
                                 <th scope="col">Stato</th>
+                                <th scope="col">Commenti da approvare</th>
                                 <th scope="col">Azione</th>
                                 <th scope="col">Azione</th>
                                 <th scope="col">Azione</th>
@@ -43,6 +44,14 @@
                                         @else
                                             <span class="badge badge-secondary">bozza</span>
                                         @endif
+                                    </td>
+                                    <td>
+                                        @php
+                                        $comments_not_approved = $post->comments->filter(function ($comment) {
+                                            return $comment->approved == 0;
+                                        });
+                                        @endphp
+                                        {{count($comments_not_approved)}}
                                     </td>
                                     <td>
                                         {{-- bottone visualizza --}}

@@ -36,6 +36,15 @@
             <div v-show="commentSent">
                 Commento in fase di approvazione!
             </div>
+            <div>
+                <h3>Commenti</h3>
+                <ul>
+                    <li v-for="comment in post.comments" :key="comment.id">
+                        <h4>{{comment.name}}</h4>
+                        <p>{{comment.content}}</p>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 </template>
